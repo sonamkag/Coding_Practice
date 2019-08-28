@@ -23,17 +23,16 @@ It takes 1 step to move from (0, 0) to (1, 1). It takes one more step to move fr
 
 
 int sPath(int x1, int x2, int y1, int y2) {
-    int dx, dy, ans;
-    dx = abs(x2-x1);
-    dy = abs(y2-y1);
-    ans = max(dx,dy);
+    int dx,dy,ans;
+    dx=abs(x2-x1);
+    dy=abs(y2-y1);
+    ans=max(dx,dy);
     return ans;
 }
 
 int Solution::coverPoints(vector<int> &A, vector<int> &B) {
-    int distance = 0;
-    for(int i=0; i<A.size()-1; i++){
-     distance = distance + sPath(A[i], A[i+1], B[i], B[i+1]);
-    }
-    return distance;
+    int d=0;
+    for(int i=0;i<A.size()-1;i++)
+        d += sPath(A[i],A[i+1],B[i],B[i+1]);
+    return d;
 }
