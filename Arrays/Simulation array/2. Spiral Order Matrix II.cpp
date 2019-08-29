@@ -1,3 +1,11 @@
+/*
+Given an integer n, generate a square matrix filled with elements from 1 to n2 in spiral order.
+
+Example:
+Given n = 3,
+You should return the following matrix:
+ [ [ 1, 2, 3 ], [ 8, 9, 4 ], [ 7, 6, 5 ] ] 
+*/
 vector<vector<int> > Solution::generateMatrix(int A) {
      int n=A,tmp=1,sRow=0,sCol=0,fRow=n,fCol=n; 
     vector<vector<int>> B(n,vector<int>(n));
