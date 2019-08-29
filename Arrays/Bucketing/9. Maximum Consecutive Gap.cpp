@@ -45,5 +45,3 @@ int Solution::maximumGap(const vector<int> &A) {
     max_gap=max(max_gap,maxVal-prev_val); 
     return max_gap; 
 }
-
-
